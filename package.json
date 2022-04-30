@@ -1,0 +1,47 @@
+{
+  "name": "gateway_fe",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "smeez <gatez@yahoo.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "webpack serve --mode=development --hot",
+    "start": "webpack --mode=production"
+  },
+  "dependencies": {
+    "babel-loader": "^8.2.5",
+    "file-loader": "^6.2.0",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-router": "^6.3.0",
+    "react-router-dom": "^6.3.0",
+    "url-loader": "^4.1.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.10",
+    "@babel/plugin-proposal-class-properties": "^7.16.7",
+    "@babel/plugin-proposal-export-default-from": "^7.16.7",
+    "@babel/preset-env": "^7.17.10",
+    "@babel/preset-react": "^7.16.7",
+    "babel-eslint": "^10.1.0",
+    "css-loader": "^6.7.1",
+    "eslint": "^8.14.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-react": "^1.1.7",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.29.4",
+    "html-webpack-plugin": "^5.5.0",
+    "less": "^4.1.2",
+    "less-loader": "^10.2.0",
+    "node-sass": "^7.0.1",
+    "prettier": "^2.6.2",
+    "sass-loader": "^12.6.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.72.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.8.1"
+  }
+}
