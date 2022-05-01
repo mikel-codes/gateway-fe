@@ -9,9 +9,9 @@ let initialState = {
 }
 
 let gatewayRules =  {
-  serial: {required:true, minlength: 5, maxlength: 12, numeric: true},
-  name: {required: true, minlength: 5, maxlength: 10, alpha: true},
-  ipv4: {required: true, ipv4: true}
+  serial: { required:true, minlength: 5, maxlength: 12, numeric: true },
+  name: { required: true, minlength: 5, maxlength: 10, alpha: true },
+  ipv4: { required: true, ipv4: true }
 }
 const GatewayForm = () => {
   const [payload, setPayload] = useState(initialState)
