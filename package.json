@@ -16,7 +16,8 @@
     "react-dom": "^18.1.0",
     "react-router": "^6.3.0",
     "react-router-dom": "^6.3.0",
-    "url-loader": "^4.1.1"
+    "url-loader": "^4.1.1",
+    "validator": "^13.7.0"
   },
   "devDependencies": {
     "@babel/core": "^7.17.10",
