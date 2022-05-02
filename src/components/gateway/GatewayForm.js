@@ -46,7 +46,7 @@ const GatewayForm = () => {
   }
 
   return (
-    <FormValidator data={payload} rules={rules} submit={handleSubmit} isEdit={loc.state !==  null}>
+    <FormValidator data={payload} rules={rules} submit={handleSubmit} isEdit={loc.state !==  null} name={"Gateway"}>
       <div className="form">
         <div className="form_field">
           <label htmlFor="serial">Serial</label>

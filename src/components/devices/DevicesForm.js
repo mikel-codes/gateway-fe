@@ -55,7 +55,7 @@ const DeviceForm = () => {
   }
 
   return (
-    <FormValidator data={payload} rules={rules} submit={handleSubmit} isEdit={loc.state !== null}>
+    <FormValidator data={payload} rules={rules} submit={handleSubmit} isEdit={loc.state !== null} name={"Device"}>
       <div className="form">
         <div className="form_field">
           <label htmlFor="vendor">Vendor</label>
