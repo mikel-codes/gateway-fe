@@ -23,7 +23,6 @@ if (rules[field].ipv4 && !validator.isIP(val, [4])) {
                     fielderrors.push("Enter a valid IPv4 address");
                 }
 
-
             }
 if (fielderrors.length > 0) {
                 errors[field] = fielderrors;
