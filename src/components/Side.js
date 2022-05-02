@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { NavLink } from 'react-router-dom'
 
 const Side = () => {
   return (
@@ -7,27 +7,22 @@ const Side = () => {
       <nav className="head-nav">
         <ul className="menu">
         <li>
-          <a href="#">
+          <NavLink to="/overview">
           <span className="svg"><i className="fa-solid fa-house"></i></span>
-          <span>Overview</span></a>
+          <span>Overview</span></NavLink>
         </li>
           <li>
-            <a href="#">
-            <i id="svg" style={{color: "red"}} className="fa-solid fa-network-wired"></i>
-            <span>Gateway</span></a>
+            <NavLink to="gateways">
+            <i id="svg" className="fa-solid fa-network-wired"></i>
+            <span>Gateway</span></NavLink>
           </li>
           <li>
-            <a href="#">
+            <NavLink to="devices">
             <i className="fa-solid fa-router"></i>
-              <span>Devices</span></a>
+              <span>Devices</span></NavLink>
           </li>
 
-          <li>
-            <a href="#">
-              <svg className="paper-airplane">
-                <use xmlnsXlink="http://www.w3.org/1999/xlink" xlinkHref="#paper-airplane"></use>
-              </svg><span></span></a>
-          </li>
+
         </ul>
       </nav>
 </div>
