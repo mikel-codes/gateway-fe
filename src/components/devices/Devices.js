@@ -14,8 +14,9 @@ const device = () => {
       }
     }).catch(e => console.log(e))
   },[])
-  const computeIP = (gateway, uid) => {
-    partA = gateway.split('.')
+  const computeIP = (g, uid) => {
+    return g.substring(0, g.length - 1) + (Number(g.charAt(g.length - 1)) + uid)
+
   //  gateway.splice(0, partA.length) +  uid
   }
   const removeDevice = async (device) => {
@@ -50,7 +51,7 @@ const device = () => {
       navigate("edit", {state: {device, disabled: true}})
     }
   }
-  
+
   return (
     <div className="tabs">
       <div style={{display: "flex", justifyContent: "space-around"}}>
@@ -85,7 +86,7 @@ const device = () => {
         <td>{d.vendor}</td>
         <td>{d.uid == null ? "N/A" : d.uid}</td>
 
-        <td>{d.gateway.ipv4 + d.uid}</td>
+        <td>{computeIP(d.gateway.ipv4, d.uid)}</td>
         <td><span className={`switch ${d.status}`}>{d.status_name}</span></td>
         <td>{new Date(d.created_on).toLocaleString()}</td>
         <td>
