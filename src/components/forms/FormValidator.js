@@ -41,17 +41,15 @@ static getDerivedStateFromProps(props, state) {
     }
     render() {
         return <React.Fragment>
-
   <div id="container">
-
-            <ValidationContext.Provider value={ this.state }>
+  <ValidationContext.Provider value={ this.state }>
                 <div onChange={ this.handleChange }>
                     { this.props.children }
                 </div>
             </ValidationContext.Provider>
 <div className="text-center">
                 <button type="submit" className={ `btn ${ this.getButtonClasses() }`} onClick={ this.handleClick }
-                        disabled={ this.state.formSubmitted && !this.formValid }>Create Gateway</button>
+                        disabled={ this.state.formSubmitted && !this.formValid }>{this.props.isEdit ? "Update" : "Create"} </button>
             </div>
 </div>
 

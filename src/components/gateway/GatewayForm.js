@@ -46,7 +46,7 @@ const GatewayForm = () => {
   }
 
   return (
-    <FormValidator data={payload} rules={rules} submit={handleSubmit} isEdit={loc.state}>
+    <FormValidator data={payload} rules={rules} submit={handleSubmit} isEdit={loc.state !==  null}>
       <div className="form">
         <div className="form_field">
           <label htmlFor="serial">Serial</label>
@@ -71,5 +71,3 @@ const GatewayForm = () => {
 }
 
 export default GatewayForm
-
-//<input type="submit"  value="Create Gateway" />

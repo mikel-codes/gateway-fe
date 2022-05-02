@@ -35,7 +35,7 @@ const Gateway = () => {
     <input type="search" placeholder="search..." />
     </span>
     <span>
-      <button className="link" onClick={() => navigate('new')}><i className="fa-solid fa-plus"></i>Add Gateway</button>
+      <button className="link" onClick={() => navigate('new',)}><i className="fa-solid fa-plus"></i>Add Gateway</button>
     </span>
   </div>
     <table className="tabs">
