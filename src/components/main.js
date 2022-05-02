@@ -9,7 +9,7 @@ const Main = (props) => {
     <Side />
     <main className="wrap-all-the-things">
       <ErrorBoundary>
-        <Suspense fallback={<div className="loader"></div>}>
+        <Suspense fallback={<div className="bigloader"></div>}>
           <Outlet />
       </Suspense>
       </ErrorBoundary>

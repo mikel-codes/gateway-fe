@@ -279,6 +279,27 @@ table.tabs{
   border-radius: 100%;
   animation: rotation .7s infinite linear;
 }
+.bigloader {
+  padding: 50px;
+  position: relative;
+  text-align: center;
+}
+
+.bigloader:before {
+  content: "";
+  height: 250px;
+  width: 250px;
+  margin: -15px auto auto -15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #2180c0 #ccc #ccc;
+  border-radius: 100%;
+  animation: rotation .7s infinite linear;
+}
+
 
 @keyframes rotation {
   from {
