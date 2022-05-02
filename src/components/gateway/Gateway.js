@@ -57,7 +57,7 @@ const Gateway = () => {
         <td>{g.ipv4}</td>
         <td style={{textAlign: "center"}}>{g.device_set.length}</td>
         <td>
-          <span className="btn" onClick={() => navigate("edit", {state: {gateway: g}})}>e</span>
+          <span className="btn" onClick={() => navigate("edit", {state: {gateway: g}})}>🖉</span>
         </td>
         <td onClick={() => removeGateway(g)}>
           <i style={{color: "indianred"}} className="fa-solid fa-trash"></i>

@@ -72,8 +72,8 @@ const device = () => {
             <th>UID</th>
             <th>IP</th>
             <th>Status</th>
-            <th>Acts</th>
             <th>Created On</th>
+            <th>Activity</th>
             <th colSpan={2}></th>
           </tr>
       </thead>
@@ -81,12 +81,12 @@ const device = () => {
       {devices.length > 0 && devices.map((d,i) => <tr key={i}>
         <td><i className="fa-solid  fa-network-wired"></i></td>
 
-        <td>{d.gateway !== null && d.gateway.name || "None"}</td>
-        <td>{d.gateway !== null && d.gateway.ipv4 || "None"}</td>
+        <td>{d.gatewayx.name || "None"}</td>
+        <td>{d.gatewayx.ipv4 || "None"}</td>
         <td>{d.vendor}</td>
         <td>{d.uid == null ? "N/A" : d.uid}</td>
 
-        <td>{d.gateway !== null && computeIP(d.gateway.ipv4, d.uid) || "N/A"}</td>
+        <td>{computeIP(d.gatewayx.ipv4, d.uid)}</td>
         <td><span className={`switch ${d.status}`}>{d.status_name}</span></td>
         <td>{new Date(d.created_on).toLocaleString()}</td>
         <td>
