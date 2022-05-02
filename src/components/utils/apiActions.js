@@ -1,4 +1,6 @@
-import {axiosApi } from "@@/api"
+import {axiosApi } from "@@/api";
+
+
 export const createApi = async (url, payload={}) => {
   try {
     let promise = await axiosApi.post(url, payload);
@@ -14,6 +16,7 @@ export const createApi = async (url, payload={}) => {
     console.error('Api found some errors as ', e)
   }
 }
+
 
 export const listApi = async (url) => {
   try {
