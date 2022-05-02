@@ -116,8 +116,27 @@ button.submit{
   }
 }
 .btn{
-  width: 50px;
-  height: 50px;
-  background: grey;
+  width: 30px;
+  height: 30px;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 10px;
+  background: whitesmoke;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  box-shadow: 2px 2px 2px 2px lightgray;
   border-radius: 50%;
 }
+.switch{
+  width: 100%;
+}
+  .on{
+    color: red;
+    //background: indianred;
+  }
+  .off{
+    color: blue;
+
+  }
