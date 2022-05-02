@@ -5,5 +5,5 @@ import App from "./App"
 import "./App.scss"
 
 const container = document.getElementById('app');
-const root = createRoot(container); 
+const root = createRoot(container);
 root.render(<BR><App tab="home" /></BR>);
