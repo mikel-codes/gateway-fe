@@ -57,11 +57,14 @@ const Gateway = () => {
         <td>{g.ipv4}</td>
         <td style={{textAlign: "center"}}>{g.device_set.length}</td>
         <td>
+          <div style={{justifyContent: "space-between", display: "flex"}}>
           <span className="btn" onClick={() => navigate("edit", {state: {gateway: g}})}>🖉</span>
-        </td>
-        <td onClick={() => removeGateway(g)}>
-          <i style={{color: "indianred"}} className="fa-solid fa-trash"></i>
-        </td>
+
+        <span className="btn" onClick={() => removeGateway(g)}>
+          <i style={{color: "indianred"}} className="fa-solid fa-trash" />
+        </span>
+      </div>
+      </td>
       </tr>)
       ||
       <tr>
