@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import {Link, useNavigate} from 'react-router-dom'
 import {axiosApi} from '@@/api'
-import {deleteApi} from '@@/utils'
+import {deleteApi, updateApi} from '@@/utils'
 
 
 const device = () => {
@@ -29,7 +29,28 @@ const device = () => {
     }
     return false
   }
+  const toggleConnection = async (device) => {
+    if(device.status == 'on'){
+      const confirm = window.confirm("Confirm Disconnection?")
+      if(confirm){
+        const resp = await updateApi(`/devices/${device.id}/`, {...device, gateway: null})
+        if(resp.status == 200){
 
+          alert("disconnected")
+          let temp = devices
+          setDevices(devices => devices = devices.map(d => {
+            if(d.id === device.id)
+              d = resp.data
+            return d
+            }))
+        }
+      }
+    }
+    else{
+      navigate("edit", {state: {device, disabled: true}})
+    }
+  }
+  
   return (
     <div className="tabs">
       <div style={{display: "flex", justifyContent: "space-around"}}>
@@ -50,6 +71,7 @@ const device = () => {
             <th>UID</th>
             <th>IP</th>
             <th>Status</th>
+            <th>Acts</th>
             <th>Created On</th>
             <th colSpan={2}></th>
           </tr>
@@ -66,9 +88,11 @@ const device = () => {
         <td>{d.gateway.ipv4 + d.uid}</td>
         <td><span className={`switch ${d.status}`}>{d.status_name}</span></td>
         <td>{new Date(d.created_on).toLocaleString()}</td>
-
-
-
+        <td>
+          <button className={`${d.status}`} style={{height: "20px",padding: "0.2em", width: "100px", fontSize: "12px"}} onClick={() => toggleConnection(d)}>
+            {d.status == 'on' ? "Disconnect" : "Connect"}
+          </button>
+      </td>
         <td colSpan={2}>
           <div style={{display: "flex", justifyContent: "space-around"}}>
                 <span className="btn" onClick={() => navigate("edit", {state: {device: d}})}>🖉</span>
