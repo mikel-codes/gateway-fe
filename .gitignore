@@ -1,8 +1,9 @@
 .DS_STORE
-node_modules  
-*.log 
+node_modules
+*.log
 *-error
 node_modules
 yarn_react.sh
 .vscode
 build/
+__snapshots__
