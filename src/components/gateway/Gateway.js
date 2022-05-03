@@ -50,7 +50,9 @@ const Gateway = () => {
         </tr>
       </thead>
       <tbody>
-      {gateways.length > 0 && gateways.map((g,i) => <tr key={i}>
+      {gateways.length > 0 && gateways.map((g,i) => <tr key={i} style={{cursor: "pointer"}}
+
+      onClick={() => navigate(`showing/${g.id}`, {state: {gateway: g}}) }>
         <td><i className="fa-solid fa-1.2x fa-microchip"></i></td>
         <td>{g.serial || "FakeSerial"}</td>
         <td>{g.name}</td>
