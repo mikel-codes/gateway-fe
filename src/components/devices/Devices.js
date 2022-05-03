@@ -6,18 +6,19 @@ import {deleteApi, updateApi} from '@@/utils'
 
 const device = () => {
   const [devices, setDevices] = useState([])
+  const [searchItem, setSearch] = useState("")
+
   const navigate = useNavigate()
   useEffect(() => {
-    axiosApi.get("devices/").then(res => {
+    axiosApi.get(`devices/?search=${searchItem}`).then(res => {
       if(res.status== 200){
         setDevices(res.data)
       }
     }).catch(e => console.log(e))
-  },[])
+  },[searchItem])
   const computeIP = (g, uid) => {
     return g.substring(0, g.length - 1) + (Number(g.charAt(g.length - 1)) + uid)
 
-  //  gateway.splice(0, partA.length) +  uid
   }
   const removeDevice = async (device) => {
     const confirm = window.confirm(`Do you want to remove this device  ${device.vendor}? `)
@@ -55,7 +56,7 @@ const device = () => {
   return (
     <div className="tabs">
       <div style={{display: "flex", justifyContent: "space-around"}}>
-        <span><input type="search" placeholder="search..." /></span>
+        <span><input type="search" placeholder="search..." onChange={e => setSearch(e.target.value)}/></span>
         <span>
           <button className="link" onClick={() => navigate('new')}>
             <i className="fa-solid fa-plus"></i>Add device

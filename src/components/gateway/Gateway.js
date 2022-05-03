@@ -6,15 +6,15 @@ import {deleteApi} from '@@/utils'
 
 const Gateway = () => {
   const [gateways, setGateways] = useState([])
+  const [searchItem, setSearch] = useState("")
   const navigate = useNavigate()
   useEffect(() => {
-    axiosApi.get("http://localhost:8000/api/router/gateways/").then(res => {
+    axiosApi.get(`gateways/?search=${searchItem}`).then(res => {
       if(res.status== 200){
-        console.log(res)
         setGateways(res.data)
       }
     }).catch(e => console.log(e))
-  },[])
+  },[searchItem])
   const removeGateway = async (gateway) => {
     const confirm = window.confirm(`Do you want to remove this gateway with serial ${gateway.serial}? `)
     if(confirm){
@@ -32,7 +32,7 @@ const Gateway = () => {
     <div className="tabs">
       <div style={{display: "flex", justifyContent: "space-around"}}>
     <span>
-    <input type="search" placeholder="search..." />
+    <input type="search" placeholder="search..." onChange={e => setSearch(e.target.value)}/>
     </span>
     <span>
       <button className="link" onClick={() => navigate('new',)}><i className="fa-solid fa-plus"></i>Add Gateway</button>
