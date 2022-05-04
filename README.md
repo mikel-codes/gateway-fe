@@ -1,3 +1,7 @@
+https://github.com/mikel-codes/gateway_fe/workflows//badge.svg
+[![codecov](https://codecov.io/gh/mikel-codes/gateway-fe/branch/main/graph/badge.svg)](https://codecov.io/gh/mikel-codes/gateway-fe)
+
+
 Available Scripts
 In the project directory, you can run:
 
