@@ -31,12 +31,13 @@ jobs:
         cache-dependency-path: '**/yarn.lock'
 
     - name: Setup CI
-      run:  yarn ci
+      run:  npm ci
+
     - name: Install dependencies
-      run: yarn add
+      run:  npm add
 
     - name: Run the tests and generate coverage report
-      run:  yarn run test -- --coverage
+      run:  npm run test -- --coverage
 
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v3
