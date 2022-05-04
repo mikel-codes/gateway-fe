@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
        run:
-         working-directory: 'gateway-fe'
+         working-directory: '**'
 
     strategy:
       matrix:
