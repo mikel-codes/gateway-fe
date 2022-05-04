@@ -15,7 +15,7 @@ const GatewayDetail = () => {
       <h3>{devices.length} devices connected</h3>
       <div className="display">
           <div className="block">
-            <i class="fa-solid fa-3x fa-wifi"></i>
+            <i className="fa-solid fa-3x fa-wifi"></i>
             <ul>
               <li>{rest.name}</li>
               <li>{rest.serial}</li>
@@ -26,10 +26,11 @@ const GatewayDetail = () => {
           <div className="block">
             {devices.length > 0 && devices.map((d, i) => <div key={i}>
             <div style={{display:"flex", justifyContent: "space-around", width: "300px"}}>
-              <i style={{color: "#32CD32"}} className="fa-solid fa-network-wired"></i>
-              <span>{d.vendor}</span>
-              <span>{d.status_name}</span>
-              <span>{computeIP(rest.ipv4, d.uid)}</span>
+                <i style={{color: "#32CD32"}} className="fa-solid fa-network-wired">
+                </i>
+                <span>{d.vendor}</span>
+                <span>{d.status_name}</span>
+                <span>{computeIP(rest.ipv4, d.uid)}</span>
               </div>
             </div>)}
          </div>
