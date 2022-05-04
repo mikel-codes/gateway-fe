@@ -3,6 +3,7 @@ import {Route, Routes} from 'react-router-dom'
 import {Gateway, GatewayForm, GatewayDetail} from '@@/gateway'
 import {Devices, DeviceForm} from '@@/devices'
 import Container from '@@/modals/Container'
+import NotFound from '@@/NotFound'
 import Main from '@@/main'
 
 const App = () => {
@@ -24,7 +25,7 @@ const App = () => {
           <Route path="devices" element={<Devices/>} />
           <Route path="devices/new" element={<Container><DeviceForm /></Container>} />
           <Route path="devices/edit" element={<Container><DeviceForm /></Container>} />
-
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     )
