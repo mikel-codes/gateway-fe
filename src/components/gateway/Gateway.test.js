@@ -22,54 +22,28 @@ const history = createMemoryHistory()
 afterEach(cleanup)
 
 it("renders successfully Gateway List", () => {
-  //const cont= renderWithRouter(<Gateway />, container);
-  /*act(() =>  render(
-    <Router  location={history.location} navigator={history}>
-      <Gateway/>
-    </Router>, container));
-    */
-  renderWithRouter(<GatewayForm />)
+
+  renderWithRouter(<Gateway />)
   expect(screen.getByRole('table')).toHaveTextContent("No Gateways");
   expect(screen.getByRole('button')).toHaveTextContent(/Add gateway/i)
 
   fireEvent.click(screen.getByText(/add gateway/i))
-  expect(history.location.pathname).toBe('/new')
-  expect(history.location.state).toBeNull()
-
-  const detail =   render(
-    <Router  location={history.location} navigator={history}>
-      <GatewayForm />
-    </Router>);
-    //console.log(detail)
-    expect(screen).toMatchSnapshot(detail)
-  //expect(screen.getByTestId('portal')).not.toBeNull()
-});
-
-it("renders successfully Gateway Detail", () => {
-  const fakeGateway = {
-    name: "Gateway1",
-    serial: "91992929292",
-    ipv4: "1.1.2.3",
-    devices: []
-  };
-
-  renderWithRouter(<GatewayDetail gateway={fakeGateway} />)
-  expect(screen.getByRole('li')).toHaveTextContent("Gateway1");
-  //expect(screen.getByRole('button')).toHaveTextContent(/Add gateway/i)
-
-  //expect(history.location.pathname).toBe('/new')
-  //expect(history.location.state).toBeNull()
+//  expect(history.location.pathname).toBe('/new')
+//  expect(history.location.state).toBeNull()
 
 
-    //expect(screen).toMatchSnapshot(detail)
-  //expect(screen.getByTestId('portal')).not.toBeNull()
 });
 
 
 //it("renders the detail correctly", )
 
 
-
+//const cont= renderWithRouter(<Gateway />, container);
+/*act(() =>  render(
+  <Router  location={history.location} navigator={history}>
+    <Gateway/>
+  </Router>, container));
+  */
 /*
 act(() => {render(<Gateway name="Margaret" />, container);});
 expect(container.textContent).toBe("Hello, Margaret!");
