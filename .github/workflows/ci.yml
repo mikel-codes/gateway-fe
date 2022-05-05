@@ -40,7 +40,7 @@ jobs:
       run:  yarn
 
     - name: Run the tests and generate coverage report
-      run:  yarn run test --coverage
+      run:  yarn run test -u --coverage
 
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v2
