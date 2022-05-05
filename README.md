@@ -28,6 +28,6 @@ See the section about running tests for more information.
 
 
 ## Builds the app for production to the build folder.
- - yarn run start
+ - yarn run build
 
 It correctly bundles React in production mode and optimizes the build for the best performance using webpack
