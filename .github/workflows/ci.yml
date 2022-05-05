@@ -27,13 +27,14 @@ jobs:
       uses: actions/setup-node@v3
 
 
-    - name: Setup yarn
-      run: npm install -g yarn
-
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'yarn'
         cache-dependency-path: '**/yarn.lock'
+    
+    - name: Setup yarn
+      run: npm install -g yarn
+
 
     - name: Setup CI
       run:  yarn ci
