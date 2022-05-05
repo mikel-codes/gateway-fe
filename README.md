@@ -1,4 +1,4 @@
-![CI/CD](https://github.com/mikel-codes/gateway-fe/.github/workflows/ci.yml/badge.svg?branch=main)
+![CI/CD](https://github.com/mikel-codes/gateway-fe/.github/workflows/ci.yml/badge.svg)
 
 
 [![codecov](https://codecov.io/gh/mikel-codes/gateway-fe/branch/main/graph/badge.svg)](https://codecov.io/gh/mikel-codes/gateway-fe)
