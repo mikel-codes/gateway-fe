@@ -2,10 +2,10 @@
 import React from "react";
 //import { render, unmountComponentAtNode } from "react-dom";
 import { act } from "react-dom/test-utils";
-import {Router} from 'react-router-dom'
+import { Router } from 'react-router-dom'
 import { createMemoryHistory } from 'history'
 import '@testing-library/jest-dom/extend-expect';
-import {renderWithRouter} from '@/TestHelpers'
+import { renderWithRouter } from '@/TestHelpers'
 import { render, cleanup, fireEvent, screen } from '@testing-library/react';
 import Gateway from "./Gateway";
 import GatewayDetail from "./GatewayDetail"
@@ -28,8 +28,8 @@ it("renders successfully Gateway List", () => {
   expect(screen.getByRole('button')).toHaveTextContent(/Add gateway/i)
 
   fireEvent.click(screen.getByText(/add gateway/i))
-//  expect(history.location.pathname).toBe('/new')
-//  expect(history.location.state).toBeNull()
+  //  expect(history.location.pathname).toBe('/new')
+  //  expect(history.location.state).toBeNull()
 
 
 });

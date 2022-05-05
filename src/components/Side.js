@@ -10,19 +10,19 @@ const Side = () => {
 
           <li>
             <NavLink to="gateways">
-            <i id="svg" className="fa-solid fa-wifi"></i>
-            <span>Gateway</span></NavLink>
+              <i id="svg" className="fa-solid fa-wifi"></i>
+              <span>Gateway</span></NavLink>
           </li>
           <li>
             <NavLink to="devices">
-            <i className="fa-solid fa-network-wired"></i>
+              <i className="fa-solid fa-network-wired"></i>
               <span>Devices</span></NavLink>
           </li>
 
 
         </ul>
       </nav>
-</div>
+    </div>
 
   )
 }
