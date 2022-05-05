@@ -2,7 +2,7 @@
 
 [![codecov](https://codecov.io/gh/mikel-codes/gateway-fe/branch/main/graph/badge.svg)](https://codecov.io/gh/mikel-codes/gateway-fe)
 
-![License](https://img.shields.io/github/license/mikel-codes/.github)
+![License](https://img.shields.io/github/license/mikel-codes/gateway-fe)
 
 Available Scripts
 In the project directory, you can run:
