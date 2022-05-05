@@ -1,3 +1,8 @@
+![CI/CD](https://github.com/mikel-codes/.github/workflows/CI/CD/badge.svg)
+
+[![codecov](https://codecov.io/gh/mikel-codes/gateway-fe/branch/main/graph/badge.svg)](https://codecov.io/gh/mikel-codes/gateway-fe)
+
+
 Available Scripts
 In the project directory, you can run:
 
@@ -24,6 +29,6 @@ See the section about running tests for more information.
 
 
 ## Builds the app for production to the build folder.
- - yarn run start
+ - yarn run build
 
 It correctly bundles React in production mode and optimizes the build for the best performance using webpack

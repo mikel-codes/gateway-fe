@@ -1,12 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter as BR, MemoryRouter } from 'react-router-dom'
-import { render, fireEvent, cleanup, screen} from '@testing-library/react'
+import { render, fireEvent, cleanup, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import { act } from "react-dom/test-utils";
 import { createRoot } from 'react-dom/client';
 import userEvent from '@testing-library/user-event'
-import {renderWithRouter} from './TestHelpers'
+import { renderWithRouter } from './TestHelpers'
 import App from './App';
 
 afterEach(cleanup)
@@ -25,7 +25,7 @@ it('should take a snapshot', () => {
   expect(asFragment(<App />)).toMatchSnapshot()
 });
 
-test('full app rendering/navigating',   () => {
+test('full app rendering/navigating', () => {
   renderWithRouter(<App />)
   // verify page content for expected route
   // often you'd use a data-testid or role query, but this is also possible
@@ -38,12 +38,12 @@ test('full app rendering/navigating',   () => {
   //act(() => { fireEvent.click(gwLink)})
 
   // check that the content changed to the new page
-   //expect(screen.getByText(/no gateways/i)).toBeInTheDocument()
+  //expect(screen.getByText(/no gateways/i)).toBeInTheDocument()
   //expect(screen.getByText(/no gateways/i)).toBeInTheDocument()
 })
 
 test('unregistered routes redirect to NotFound comp', () => {
-  renderWithRouter(<App />, {route:"/not_found_page"})
+  renderWithRouter(<App />, { route: "/not_found_page" })
   expect(screen.getByText(/Page You Seek Does Not Exist/i)).toBeInTheDocument()
 })
 
