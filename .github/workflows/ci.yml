@@ -36,8 +36,8 @@ jobs:
       run: npm install -g yarn
 
 
-    - name: Setup CI
-      run:  npm ci
+    - name: Install  deps
+      run: yarn
 
     - name: Run the tests and generate coverage report
       run:  yarn run test -- --coverage
