@@ -7,16 +7,16 @@ In the project directory, you can run:
 ###Heroku LInk: https://gatewayx.herokuapp/com ( < - staged here)
 
 The first thing to do is to clone the repository:
-github repo -> https://github.com/mikel-codes/gateway_fe/
+github repo -> https://github.com/mikel-codes/gateway-fe/
 ```sh
-$ git clone https://github.com/mikel-codes/gateway_fe.git
-$ cd gateway_fe
+$ git clone https://github.com/mikel-codes/gateway-fe.git
+$ cd gateway-fe
 ```
 
 This project uses Yarn and not Npm
 
 ## Change directory to parent folder
-   - cd gateway_fe
+   - cd gateway-fe
 
 ## Install the all dependencies(both development and others)
  - yarn add or yarn install
@@ -37,5 +37,8 @@ See the section about running tests for more information.
 
 ## Builds the app for production to the build folder.
  - yarn run build
+
+### TO run with express server
+ - yarn run start
 
 It correctly bundles React in production mode and optimizes the build for the best performance using webpack
