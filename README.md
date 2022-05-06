@@ -1,12 +1,17 @@
-![ci/cd](https://github.com/mikel-codes/gateway-fe/actions/workflows/ci.yml/badge.svg)
-
-
-[![codecov](https://codecov.io/gh/mikel-codes/gateway-fe/branch/main/graph/badge.svg)](https://codecov.io/gh/mikel-codes/gateway-fe)
-
-![License](https://img.shields.io/github/license/mikel-codes/gateway-fe)
+![ci/cd](https://github.com/mikel-codes/gateway-fe/actions/workflows/ci.yml/badge.svg) [![codecov](https://codecov.io/gh/mikel-codes/gateway-fe/branch/main/graph/badge.svg)](https://codecov.io/gh/mikel-codes/gateway-fe) ![License](https://img.shields.io/github/license/mikel-codes/gateway-fe)
 
 Available Scripts
 In the project directory, you can run:
+## Setup
+
+###Heroku LInk: https://gatewayx.herokuapp/com ( < - staged here)
+
+The first thing to do is to clone the repository:
+github repo -> https://github.com/mikel-codes/gateway_fe/
+```sh
+$ git clone https://github.com/mikel-codes/gateway_fe.git
+$ cd gateway_fe
+```
 
 This project uses Yarn and not Npm
 
@@ -14,7 +19,7 @@ This project uses Yarn and not Npm
    - cd gateway_fe
 
 ## Install the all dependencies(both development and others)
- - yarn add
+ - yarn add or yarn install
 
 ## Start in development Mode
  - yarn run dev
